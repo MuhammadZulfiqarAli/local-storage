@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>new</title>
+      <style>
+            *{
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+background-color: rgb(17, 86, 114);
+height: 500px;
+text-align: center;
+}
+h1{
+      color: white;
+      font-family:  sans-serif;
+      margin-top: 30px;
+      display: block;
+      
+
+}
+.container{
+      background-color: rgb(2, 21, 29);
+      border-radius: 60px;
+      box-shadow: 0 0 30px 0   white;
+width: 430px; 
+height: 470px;
+ margin-top: 120px;
+ 
+
+}
+ input {
+      width: 380px;
+      height: 60px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 17px;
+      font-size: 17px;
+      color: black;
+      border: none;
+}
+.input{
+      border: none;    
+}
+
+button{
+      width: 370px;
+      height: 66px;
+      background-color: white;
+      border-radius: 30px;
+      padding: 15px;
+      margin: 15px;
+      background-color: aqua;
+      color: rgba(0, 0, 0, 0.959);
+      border: black;
+      font-size: 25px;
+      
+
+}
+
+input:hover {
+      background-color: aquamarine;
+      box-shadow: 0 0  20px 0  rgb(82, 221, 175);
+      color: black;
+      width: 385px;
+      padding: 17px;
+      
+
+}
+button:hover {
+      background-color: aqua;
+      box-shadow: 0 0  30px 0  aquamarine;
+      color: black;
+      width: 150px;
+      padding: 17px;
+      
+
+}
+ @media (max-width :432px ){
+.container
+       {
+      width:328px ;
+      
+}
+} 
+@media (max-width :433px ){
+.input  input
+ {
+      width:290px ;
+      
+}
+} 
+ @media (max-width :433px ){
+button  {
+      width:290px ;
+      
+}
+}  
+
+ @media (max-width :330px ){
+.container
+       {
+      width:150px ;
+}
+} 
+@media (max-width :333px ){
+.input  input
+ {
+      width:110px ;
+      font-size: 7px;
+      
+}
+} 
+ @media (max-width :333px ){
+button  {
+      width:110px ;
+      font-size: 15px;  
+}
+}  
+
+      </style>
+</head>
+<body>
+      <div class="container">
+            <h1>Sign up</h1>
+            <div class="input">
+                  <input type="text" name=""  placeholder="Enter Your Name" id="name">
+                  <input type="email" name="" id="email" placeholder="Enter Your Email">
+                     <input type="password" name="" id="password" placeholder="Enter Your Password">    
+                  <div class="btn"> <button onclick="press()"> Submit </button> </div>
+            </div>
+      </div>
+      <script>
+           
+
+            function press() {
+            var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+        var name = document.getElementById("name").value
+
+        if (email === "" || password === "" || name === "") {
+             alert("Please fill in all the values");
+        } else {
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            localStorage.setItem("name", name);
+            window.location.href = "sign.html";
+        }
+    }
+      </script>
+
+</body>
+
+</html>

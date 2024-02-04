@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            body {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: rgb(232, 235, 236);
+                  height: 500px;
+                  text-align: center;
+            }
+
+            h1 {
+                  color: white;
+                  font-family: sans-serif;
+                  margin-top: 30px;
+                  display: block;
+
+
+            }
+
+            .container {
+                  border-radius: 60px;
+                  background-color: rgb(17, 86, 114);
+
+                  width: 420px;
+                  height: 350px;
+                  margin-top: 120px;
+            }
+
+            .container {
+
+                  box-shadow: 0 0 30px 0 rgba(24, 1, 1, 0.788);
+            }
+            .input input {
+                  width: 380px;
+                  height: 60px;
+                  background-color: white;
+                  border-radius: 10px;
+                  padding: 18px;
+                  margin: 15px;
+                  font-size: 17px;
+                  color: black;
+                  border: none;
+            }
+            input:hover {
+                  background-color: lightcoral;
+                  box-shadow: 0 0 40px 0 rgb(25, 26, 25);
+                  color: black;
+                  padding: 17px;
+            }
+            .input {
+                  border: none;
+            }
+            button {
+                  width: 380px;
+                  height: 57px;
+                  background-color: white;
+                  border-radius: 30px;
+                  padding: 14px;
+                  margin: 15px;
+                  background-color: darkred;
+                  color: white;
+                  border: none;
+                  font-size: 25px;
+            }
+            button:hover {
+                  background-color: rgb(116, 7, 7);
+                  box-shadow: 0 0 40px 0 black;
+            
+            }
+            @media (max-width: 417px){
+                  .container {
+                        width:328px ;
+                  }
+            }
+            @media (max-width :433px ){
+.input  input
+ {
+      width:290px ;
+     
+      
+}
+} 
+ @media (max-width :433px ){
+button  {
+      width:290px ;
+      
+}
+}  
+@media (max-width :330px ){
+.container
+       {
+      width:150px ;
+      
+}
+} 
+@media (max-width :333px ){
+.input  input
+ {
+      width:110px ;
+      font-size: 8px;
+      
+}
+} 
+ @media (max-width :333px ){
+button  {
+      width:110px ;
+      font-size: 15px;  
+}
+}  
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="input">
+                  <h1>Login</h1>
+                  <input type="email" name="" id="email" placeholder="Enter the email">
+                  <input type="password" name="" id="password" placeholder=" Enter thepassword">
+                  <button onclick="btn()"> Login</button>
+            </div>
+      </div>
+
+      <script>
+
+            var loginemail = document.getElementById("email")
+            var loginpassword = document.getElementById("password")
+            function btn() {
+                  var e = localStorage.getItem("email")
+                  var pass = localStorage.getItem("password")
+                  if (loginemail.value == e && loginpassword.value == pass) {
+                        alert("Conglatulation")
+                        window.location.href = "about.html";
+                  }
+                  else {
+                        alert("please try again")
+
+                  }
+            }
+      </script>
+</body>
+
+</html>
